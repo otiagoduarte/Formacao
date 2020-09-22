@@ -1,4 +1,4 @@
-function Imóvel(rua, número, cidade, códigoPostalPrincipal, códigoPostalsecundário, valor) {
+function Imóvel(rua, número, cidade, códigoPostalPrincipal, códigoPostalsecundário, valor, cor) {
 
 	this.rua = rua;
 	this.número = número;
@@ -6,5 +6,8 @@ function Imóvel(rua, número, cidade, códigoPostalPrincipal, códigoPostalsecu
 	this.códigoPostalPrincipal = códigoPostalPrincipal;
 	this.códigoPostalsecundário = códigoPostalsecundário;
 	this.valor = valor;
+
+	//teste
+	this.cor = cor;
 
 }
