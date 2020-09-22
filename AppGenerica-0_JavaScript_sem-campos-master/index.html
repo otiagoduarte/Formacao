@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>AppGenerica-0_JavaScript_sem-campos</title>
+		<link rel="stylesheet" href="estilo.css" />
+		<meta charset="UTF-8">
+		<script src="Coisa.js"></script>
+		<script src="preparar.js">// este script não pertence à formação</script>
+	</head>
+
+	<body onload="preparar()">
+		<h2>AppGenerica-0_JavaScript_sem-campos</h2>
+		<article id="intro">
+			<header>
+				<h3>Intro · Uma App genérica</h3>
+				<h4>Versão local de uma App <span>absolutamente minimalista</span></h4>
+			</header>
+			<p>O objetivo desta versão é acostumar-se ao uso das consolas dos navegadores e de Node para testar (e "debug") aplicações ("apps") escritas em JavaScript.</p>
+			<p>
+				Esta app é absolutamente minimalista, porque declara apenas <span class="quadro">1 tipo de objetos</span> genéricos (nomeado "Coisa"),
+				e porque não recorre à sua instanciação (p.ex. numa função main()), o que deve ser feito <span>manualmente na consola</span>.
+			</p>
+			<p>Esta página é informativa sobre a app e não representa a sua GUI (Interface Gráfica).</p>
+			<p>Futuras versões desta app irão gerir coleções de coisas, instanciando-as e acrescentando-as às coleções.</p>
+		</article>
+		<article id="uso">
+			<header>
+				<h3>Instruções de uso</h3>
+			</header>
+			<section>
+				<h5>Navegadores</h5>
+				<p>Abre as ferramentas do programador (CTRL-SHIFT-I ou F12), para avaliar o código fonte.</p>
+				<p>Para testar esta app com um navegador, abre o html e executa na consola:</p>
+				<div class="copiável">
+					<code>new Coisa() // instanciar</code>
+					<code>let coisa0 = new Coisa() // atribuir a uma variável</code>
+					<code>coisa0 // ver o objeto</code>
+					<code>// Cria uma nova classe e faz instruções semelhantes, p.ex.:</code>
+					<code>class Thing {} // definir uma nova class</code>
+					<code>let thing0 = new Thing()</code>
+					<code>thing0</code>
+				</div>
+				<p>Pode ainda clicar na linha que pretende copiar e depois colá-la (CTRL-V)  na consola.</p>
+			</section>
+			<section>
+				<h5>Node</h5>
+				<p>Pode ainda testar esta app com Node, numa consola Windows (CTRL-R -> cmd)</p>
+				<code>node</code>
+				<code>.load Coisa.js</code>
+				<code>let coisa0 = new Coisa()</code>
+			</section>
+		</article>
+		<article id="tópicos">
+			<header>
+				<h3>Novos conceitos, palavras chave, síntaxe e/ou APIs de JavaScript abordados/introduzidos <span class="quadro">neste exemplo</span></h3>
+			</header>
+			<section id="conceitos">
+				<p>Conceitos</p>
+				<ul>
+					<li>Programação com classes</li>
+					<li>Declaração de classes</li>
+					<li>Instanciação de objetos</li>
+					<li>Atribuição de objetos a variáveis</li>
+					<li>Uso de consolas</li>
+				</ul>
+			</section>
+			<section id="palavras">
+				<p>Palavras chave</p>
+				<ul>
+					<li>class</li>
+					<li>new</li>
+					<li>let</li>
+				</ul>
+			</section>
+			<section id="síntaxe">
+				<p>Síntaxe</p>
+				<ul>
+					<li>{} (chavetas)</li>
+					<li>= (atribuição)</li>
+					<li>// (comentários)</li>
+					<li>() (para instanciação)</li>
+				</ul>
+			</section>
+			<section id="APIs">
+				<p>APIs ("Application Programming Interface")</p>
+				<ul>
+					<li>APIs inerentes à linguagem (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects" target="_blank">objetos globais</a>)</li>
+				</ul>
+			</section>
+		</article>
+	</body>
+
+</html>

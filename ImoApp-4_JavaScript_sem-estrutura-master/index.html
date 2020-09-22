@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ImoApp-4_JavaScript_sem-estrutura</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="estilo.css"/>
+		<script src="ImoApp.js"></script>
+		<script src="Clientes.js"></script>
+		<script src="Imóveis.js"></script>
+		<script src="Cliente.js"></script>
+		<script src="Imóvel.js"></script>
+		<script src="preparar.js"></script>
+	</head>
+	<body onload="preparar();window.imoApp = new ImoApp()">
+		<h2>ImoApp-4_JavaScript_sem-estrutura</h2>
+		<article id="intro">
+			<header>
+				<h3>Intro · Uma App Imobiliária</h3>
+				<h4>Versão local de uma App Imobiliária 'ImoApp"</h4>
+			</header>
+			<p>Esta app gere uma coleção de imóveis e uma coleção de clientes</p>
+			<p>Para poder demonstrar certos conceitos da programação, como o "Object Tree", uma app genérica, que gere "Coisas" já não é suficiente.</p>
+			<p>Por esse motivo, aqui introduz-se <span class="quadro">uma app imobiliária</span> (nesta fase local, sem partes remotas num servidor), que gere objetos e.o. do tipo Imóvel.</p>
+		</article>
+		<article id="uso">
+			<header>
+				<h3>Instruções de uso</h3>
+				<p>Poderá testar a app semelhante ao uso da app genérica (versões anteriores).</p>
+			</header>
+			<section id="consola">
+				<h5>Na consola de navegadores</h5>
+				<p>Para ver que objetos a imoApp já está a gerir, p.ex.:</p>
+				<div class="copiável">
+					<code>imoApp.imóveis</code>
+					<code>imoApp.imóveis.imóvel0</code>
+					<code>imoApp.imóveis.imóvel1</code>
+					<code>imoApp.clientes</code>
+					<code>imoApp.clientes.cliente0</code>
+				</div>
+				<p>Para acrescentar imóveis, p.ex.:</p>
+				<div class="copiável">
+					<code>imoApp.imóveis.imóvel2 = new Imóvel("Praça da Tristeza", 133, "Porto", 2300, 375, 75000);</code>
+				</div>
+				<p>Em alternativa, clica na linha que pretende copiar e colar na consola.</p>
+			</section>
+			<section id="GUI">
+				<h5>Nesta versão não existe interação entre a imoApp e a página web (conhecida como a imoGUI da imoApp).</h5>
+				<p>Esta página é apenas informativa e (ainda) não representa a visualização gráfica do que acontece na imoApp.</p>
+			</section>
+		</article>
+
+		<article id="tópicos">
+			<header>
+				<h3>Novos conceitos, palavras chave, síntaxe e/ou APIs de JavaScript abordados/introduzidos <span class="quadro">neste exemplo</span></h3>
+			</header>
+			<section id="conceitos">
+				<p>Conceitos</p>
+				<ul>
+					<li>Análise Orientada a Objetos</li>
+					<li>"Business Objects" (principais e secundários)</li>
+					<li>Tradução da análise para código fonte</li>
+					<li>"Object Tree" (estrutura de objetos)</li>
+				</ul>
+			</section>
+			<section id="palavras">
+				<p>Palavras chave</p>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+			<section id="síntaxe">
+				<p>Síntaxe</p>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+			<section id="APIs">
+				<p>APIs ("Application Programming Interface")</p>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+		</article>
+
+	</body>
+</html>

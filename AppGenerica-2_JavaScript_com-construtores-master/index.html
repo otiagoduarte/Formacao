@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AppGenerica-2_JavaScript_com-construtores</title>
+		<link rel="stylesheet" href="estilo.css" />
+		<meta charset="UTF-8">
+		<script src="App.js"></script>
+		<script src="Coleção.js"></script>
+		<script src="Coisa.js"></script>
+		<script src="preparar.js"></script>
+	</head>
+	<body onload="preparar();window.app = new App()">
+		<h2>AppGenerica-2_JavaScript_com-construtores</h2>
+		<article id="intro">
+			<header>
+				<h3>Intro · Uma App genérica</h3>
+				<h4>Versão local de uma App</h4>
+			</header>
+			<p>Esta versão demonstra <span class="quadro">uma aplicação</span> que gere <span class="quadro">uma coleção</span> de coisas.</p>
+			<p>	Difere das versões anteriores em que define uma "aplicação" (App.js), que irá servir de ponto de entrada, semelhante às funções main() em outras linguagens.</p>
+			<p>
+				App.js servira ainda de ponto central, a partir de onde os "Business Objects"
+				(as instanciâs da <span class="keyword">class</span> Coisa e da da <span class="keyword">class</span> Coleção)
+				e, numa versão futura, a GUI (interface gráfica) serão configuradas e interligados.
+			</p>
+			<p>
+				Esta versão demonstra ainda o uso de construtores, em ambas as síntaxes com as palavras chave <span class="keyword">class</span> e <span class="keyword">function</span>.
+				Demonstra ainda outras alternativas para a instanciação de objetos.
+			</p>
+		</article>
+		<article id="uso">
+			<header>
+				<h3>Instruções de uso</h3>
+				<p></p>
+			</header>
+			<section>
+				<h5>Navegadores</h5>
+				<p>Em primeiro lugar, carregue a página HTML no navegador e abre as ferramentas do programador (CTRL-SHIFT-I ou F12), para poder avaliar o código fonte. Poderá ainda colocar breakpoints.</p>
+				<p>Para testar esta app na consola do navegador, e para constatar a diferença entra as várias maneiras de instanciação, escreve na consola p.ex.:</p>
+				<div class="copiável">
+					<code>app.coleção</code>
+					<code>app.coleção.coisa1.constructor</code>
+					<code>app.coleção.coisa1.constructor.name</code>
+					<code>app.coleção.coisa2.constructor</code>
+					<code>app.coleção.coisa2.constructor.name</code>
+				</div>
+				<p>Em alternativa, clica na linha que pretende copiar e colar na consola.</p>
+				<p>A constatar que o construtor de uma <span class="keyword">class</span> é uma <span class="keyword">function</span>, que poderá não ter um nome, dependente da maneira como o objeto foi instanciado.</p>
+			</section>
+			<section>
+				<h5>Node</h5>
+				<p>A partir desta versão os testes com Node são opcionais, por ser mais cómodo testar nas consola dos navegadores.</p>
+			</section>
+		</article>
+
+		<article id="tópicos">
+			<header>
+				<h3>Novos conceitos, palavras chave, síntaxe e/ou APIs de JavaScript abordados/introduzidos <span class="quadro">neste exemplo</span></h3>
+			</header>
+			<section id="conceitos">
+				<p>Conceitos</p>
+				<ul>
+					<li>Declaração de construtores</li>
+					<li>Argumentos de construtores</li>
+					<li>Alternativas de instanciação</li>
+				</ul>
+			</section>
+			<section id="palavras">
+				<p>Palavras chave</p>
+				<ul>
+					<li>constructor</li>
+				</ul>
+			</section>
+			<section id="síntaxe">
+				<p>Síntaxe</p>
+				<ul>
+					<li>{ {} } (blocos embutidos)</li>
+					<li>Síntaxe JSON (definição de novos objetos)</li>
+					<li>{} (instanciação literal de objetos)</li>
+					<li>() (argumentos do construtor)</li>
+					<li>{ campo: ... } (definição de campos nessa síntaxe)</li>
+				</ul>
+			</section>
+			<section id="APIs">
+				<p>APIs ("Application Programming Interface")</p>
+				<ul>
+					<li>window</li>
+					<li>body.onload</li>
+					<li>new <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>()</li>
+					<li>Object.defineProperty()</li>
+				</ul>
+			</section>
+		</article>
+
+	</body>
+</html>

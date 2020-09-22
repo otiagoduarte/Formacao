@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>AppGenerica-1_JavaScript_com-campos</title>
+		<link rel="stylesheet" href="estilo.css" />
+		<meta charset="UTF-8">
+		<script src="Coisa.js"></script>
+		<script src="preparar.js"></script>
+	</head>
+
+	<body onload="preparar()">
+		<h2>AppGenerica-1_JavaScript_com-campos</h2>
+		<article id="intro">
+			<header>
+				<h3>Intro · Uma App genérica</h3>
+				<h4>Versão local de uma App <span class="quadro">minimalista</span></h4>
+			</header>
+			<p>
+				Esta versão, um pouco menos minimalista, demonstra a declaração de campos privados e publicos em classes, quando definidas com a palavra chave <span class="keyword">function</span>.
+			</p>
+			<p>
+				Para variar, não recorre à síntaxe com a palavra chave <span class="keyword">class</span>, mas com a palavra chave <span class="keyword">function</span>.
+				É necessário porque, até à data de hoje, a síntaxe para declarar campos privados em classes definidas com a palavra chave <span class="keyword">class</span> não é suportado.
+			</p>
+			<p>Esta página é informativa sobre a app e não representa a sua GUI (Interface Gráfica).</p>
+			<p>Futuras versões desta app irão gerir coleções de coisas, instanciando-as e acrescentando-as às coleções.</p>
+		</article>
+		<article id="uso">
+			<header>
+				<h3>Instruções de uso</h3>
+				<p>O código fonte já instancia instâncias da <span class="keyword">class</span> Coisa com a palavra chave <span class="keyword">new</span></p>
+			</header>
+			<section>
+				<h5>Navegadores</h5>
+				<p>Abre as ferramentas do programador (CTRL-SHIFT-I ou F12), para avaliar o código fonte. Poderá ainda colocar breakpoints.</p>
+				<p>Para testar esta app com um navegador, abre o html e executa na consola:</p>
+				<div class="copiável">
+					<code>coisa0  // já foi instanciada em Coisa.js</code>
+					<code>coisa0.nome</code>
+					<code>coisa0.getNome() // porque é diferente?</code>
+					<code>coisa0.preço // porque não existe?</code>
+					<code>var coisa1 = new Coisa();</code>
+					<code>coisa1.nome = "def";</code>
+					<code>coisa1.idade = 33;</code>
+					<code>coisa1 </code>
+				</div>
+				<p>Em alternativa, clica na linha que pretende copiar e colar na consola.</p>
+				<p>A constatar que certos membros da <span class="keyword">class</span> Coisa não são visíveis na consola, por terem sido declarados como privados com a palavra chave  <span class="keyword">var</span></p>
+			</section>
+			<section>
+				<h5>Node</h5>
+				<p>Pode ainda testar esta app com Node, numa consola Windows (CTRL-R -> cmd)</p>
+				<code>node</code>
+				<code>.load Coisa.js</code>
+				<code>coisa0</code>
+				<code>let coisa1 = new Coisa()</code>
+				<code>coisa1.idade = 5</code>
+				<code>coisa1</code>
+			</section>
+		</article>
+		<article id="tópicos">
+			<header>
+				<h3>Novos conceitos, palavras chave, síntaxe e/ou APIs de JavaScript abordados/introduzidos <span class="quadro">neste exemplo</span></h3>
+			</header>
+			<section id="conceitos">
+				<p>Conceitos</p>
+				<ul>
+					<li>Declaração de membros</li>
+					<li>Membros privados vs públicos</li>
+					<li>Atribuição de novos membros após a declaração da class</li>
+					<li>Encapsulação</li>
+					<li><span class="keyword">class</span> vs<span class="keyword">function</span></li>
+					<li>Leitura de campos privados com métodos públicos</li>
+				</ul>
+			</section>
+			<section id="palavras">
+				<p>Palavras chave</p>
+				<ul>
+					<li>var</li>
+					<li>this</li>
+					<li>function</li>
+					<li>return</li>
+				</ul>
+			</section>
+			<section id="síntaxe">
+				<p>Síntaxe</p>
+				<ul>
+					<li>() (lista de argumentos)</li>
+					<li>. (operador de acesso)</li>
+					<li>; (fecho de instrução)</li>
+					<li>"" (definição de cadeias de carateres "Strings")</li>
+				</ul>
+			</section>
+			<section id="APIs">
+				<p>APIs ("Application Programming Interface")</p>
+				<ul>
+					<li>APIs inerentes à linguagem</li>
+				</ul>
+			</section>
+		</article>
+	</body>
+
+</html>

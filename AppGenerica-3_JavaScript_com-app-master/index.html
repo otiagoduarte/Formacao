@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AppGenerica-3_JavaScript_com-app</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="estilo.css"/>
+		<script src="App.js"></script>
+		<script src="Coleção.js"></script>
+		<script src="Coisa.js"></script>
+		<script src="Collection.js"></script>
+		<script src="Thing.js"></script>
+		<script src="preparar.js"></script>
+	</head>
+	<body onload="preparar();window.app = new App()">
+		<h2>AppGenerica-3_JavaScript_com-app</h2>
+		<article id="intro">
+			<header>
+				<h3>Intro · Uma App genérica</h3>
+				<h4>Versão local de uma App com  2 coleções</h4>
+			</header>
+			<p>Esta versão demonstra <span class="quadro">uma aplicação</span> que gere <span class="quadro">duas coleções</span> de objetos do tipo Coisa e Thing.</p>
+			<p>O objetivo é esclarecer que em aplicações verdadeiras da vida económica ou institucional, muitos tipos de objetos são geridos, não apenas 1 tipo. P.ex.:</p>
+			<ul>
+				<li>um banco gerirá objetos do tipo Conta, Crédito, Cliente etc.</li>
+				<li>uma asseguradora gerirá objetos do tipo Apólice e Assegurado</li>
+				<li>uma imobiliária gerirá objetos do tipo Imóvel, Agência, Cliente e Agente</li>
+				<li>uma videoteca gerirá objetos do tipo Filme, Aluguer, Cliente, Multa etc.</li>
+			</ul>
+			<p>Assim, a App torna-se o lugar central de gestão dos vários tipos de objetos geridos.
+				Se futuramente houver necessidade deste vários tipos saberem dos outros tipos mutualmente, a App será o lugar ideal para configurar estas relações.</p>
+		</article>
+		<article id="uso">
+			<header>
+				<h3>Instruções de uso</h3>
+				<p></p>
+			</header>
+			<section>
+				<h5>Navegadores</h5>
+				<p>Para testar esta app na consola do navegador:</p>
+				<div class="copiável">
+					<code>app.coleção</code>
+					<code>app.coleção.coisa1</code>
+					<code>app.collection</code>
+					<code>app.collection.thing0</code>
+				</div>
+				<p>Para acrescentar itens às coleções, p.ex.:</p>
+				<div class="copiável">
+					<code>app.coleção.coisa5 = new Coisa("coisa5", 789)</code>
+					<code>app.collection.thing2 = new Thing("thing2", 456)</code>
+				</div>
+				<p>Em alternativa, clica na linha que pretende copiar e colar na consola.</p>
+			</section>
+		</article>
+
+		<article id="tópicos">
+			<header>
+				<h3>Novos conceitos, palavras chave, síntaxe e/ou APIs de JavaScript abordados/introduzidos <span class="quadro">neste exemplo</span></h3>
+			</header>
+			<section id="conceitos">
+				<p>Conceitos</p>
+				<ul>
+					<li>"Business Objects"</li>
+					<li>Apps</li>
+					<li>Centralização</li>
+				</ul>
+			</section>
+			<section id="palavras">
+				<p>Palavras chave</p>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+			<section id="síntaxe">
+				<p>Síntaxe</p>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+			<section id="APIs">
+				<p>APIs ("Application Programming Interface")</p>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+		</article>
+
+	</body>
+</html>
