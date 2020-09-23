@@ -8,6 +8,7 @@ class Imóveis {
 		this.coleção.push(new Imóvel("Praça do Calvário", 33, "Porto", 2200, 301, 99000));
 	}
 
+/*
 	procurarEm(cidade) {
 		var imóvel;
 		var número = this.coleção.length;
@@ -18,6 +19,22 @@ class Imóveis {
 		}
 		return imóvel;
 	}
+*/
+
+procurarEm(cidade) {
+	var imóvel;
+	var list_imóvel= [];
+	var número = this.coleção.length;
+	while (número-- !== 0) {
+		var imóvel = this.coleção[número];
+		if (imóvel.em(cidade))
+			list_imóvel.push(this.coleção[número]);
+	}
+	return list_imóvel;
+}
+
+
+	//exercicio: melhorar a funcionalidade: devolver todos os imóveis numa certa cidade
 
 }
 
