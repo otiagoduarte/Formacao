@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ImoApp-6_JavaScript_com-coleções</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="estilo.css"/>
+		<script src="ImoApp.js"></script>
+		<script src="Clientes.js"></script>
+		<script src="Imóveis.js"></script>
+		<script src="Cliente.js"></script>
+		<script src="Imóvel.js"></script>
+		<script src="Endereço.js"></script>
+		<script src="CódigoPostal.js"></script>
+		<script src="preparar.js"></script>
+	</head>
+	<body onload="preparar();window.imoApp = new ImoApp()">
+		<h2>ImoApp-6_JavaScript_com-coleções</h2>
+		<article id="intro">
+			<header>
+				<h3>Intro · Uma App Imobiliária</h3>
+				<h4>Uma aplicação imobiliária "ImoApp"</h4>
+			</header>
+			<p>Esta app gere uma coleção de imóveis e uma coleção de clientes</p>
+			<p>Nesta versão são agregados (agrupados) os objetos em objetos do tipo "Array" (habitualmente chamados 'vetores' em Portugal).</p>
+		</article>
+		<article id="uso">
+			<header>
+				<h3>Instruções de uso</h3>
+				<p>Poderá testar a app semelhante ao uso da versão anterior  (com as ferramentas do programador do navegador).</p>
+			</header>
+			<section id="consola">
+				<h5>Na consola de navegadores</h5>
+				<p>Para acrescentar imóveis, p.ex.:</p>
+				<div class="copiável">
+					<code>imoApp.imóveis.coleção[2]= new Imóvel("Praça da Tristeza", 133, "Porto", 2300, 375, 75000);</code>
+				</div>
+				<p>Para ver que objetos a imoApp está a gerir, p.ex.:</p>
+				<div class="copiável">
+					<code>imoApp.imóveis.coleção</code>
+				</div>
+				<p>O que acontece na linha seguinte?</p>
+				<div class="copiável">
+					<code>imoApp.imóveis.coleção.nome = "imóveis"</code>
+				</div>
+			</section>
+			<section id="GUI">
+				<h5>Nesta versão não existe interação entre a imoApp e a página web (conhecida como a imoGUI da imoApp).</h5>
+				<p>Esta página é apenas informativa e (ainda) não representa a visualização gráfica do que acontece na imoApp.</p>
+			</section>
+		</article>
+
+		<article id="tópicos">
+			<header>
+				<h3>Novos conceitos, palavras chave, síntaxe e/ou APIs de JavaScript abordados/introduzidos <span class="quadro">neste exemplo</span></h3>
+			</header>
+			<section id="conceitos">
+				<p>Conceitos</p>
+				<ul>
+					<li>Coleções: agregação (agrupamento) de objetos</li>
+					<li>Dimensionamento automático de "arrays" (o número de itens é dinámico)</li>
+					<li>Atribuição de novos membros (não itens) a "Arrays"</li>
+				</ul>
+			</section>
+			<section id="palavras">
+				<p>Palavras chave</p>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+			<section id="síntaxe">
+				<p>Síntaxe</p>
+				<ul>
+					<li>new Array() vs []</li>
+					<li>[] (declaração de "Arrays")</li>
+					<li>[nr] (acesso de escrita e leitura em "Arrays", com um índice numérico)</li>
+				</ul>
+			</section>
+			<section id="APIs">
+				<p>APIs ("Application Programming Interface")</p>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a></li>
+				</ul>
+			</section>
+		</article>
+
+	</body>
+</html>

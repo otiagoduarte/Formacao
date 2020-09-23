@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ImoApp-7_JavaScript_com-maps</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="estilo.css"/>
+		<script src="ImoApp.js"></script>
+		<script src="Clientes.js"></script>
+		<script src="Imóveis.js"></script>
+		<script src="Cliente.js"></script>
+		<script src="Imóvel.js"></script>
+		<script src="Endereço.js"></script>
+		<script src="CódigoPostal.js"></script>
+		<script src="Thing.js"></script>
+		<script src="preparar.js"></script>
+	</head>
+	<body onload="preparar();window.imoApp = new ImoApp()">
+		<h2>ImoApp-7_JavaScript_com-maps</h2>
+		<article id="intro">
+			<header>
+				<h3>Intro · Uma App Imobiliária</h3>
+				<h4>Uma aplicação imobiliária "ImoApp"</h4>
+			</header>
+			<p>Nesta versão a app gere os seus objetos num <span>Array</span> de imóveis e um <span>Map</span> de clientes.</p>
+			<p>
+				Um Map é uma coleção na qual o lugar dos itens não é identificado com um índice numérico, mas tipicamente com um índice textual (o índice textual é chamado a "key" do Map).
+				Tecnicamente a "key" (chave) pode ser qualquer objeto, não apenas um objeto do tipo "String".
+			</p>
+			<p>Maps são especialmente úteis parar <span class="quadro">agregar objetos identificáveis por um texto único</span>, p.ex. o email de pessoas.</p>
+		</article>
+		<article id="uso">
+			<header>
+				<h3>Instruções de uso</h3>
+				<p>Poderá testar a app semelhante ao uso da versão anterior  (com as ferramentas do programador do navegador).</p>
+			</header>
+			<section id="consola">
+				<h5>Na consola de navegadores</h5>
+				<p>Para acrescentar clientes, p.ex.:</p>
+				<div class="copiável">
+					<code>var cliente = new Cliente("Praça da Fartura", 15, "Faro", 8200, 125, "Pedro Paúl", "pedropaul@meo.pt", 912345556)	</code>
+					<code>imoApp.clientes.coleção.set(cliente.email, cliente)</code>
+				</div>
+				<p>Para ver que imóveis a imoApp está a gerir, p.ex.:</p>
+				<div class="copiável">
+					<code>imoApp.imóveis.coleção</code>
+					<code>imoApp.imóveis.coleção[0]</code>
+				</div>
+				<p>Para ver que clientes a imoApp está a gerir, p.ex.:</p>
+				<div class="copiável">
+					<code>imoApp.clientes.coleção</code>
+					<code>imoApp.clientes.coleção.get("pedropaul@meo.pt")</code>
+				</div>
+				<p>O que acontece aqui?</p>
+				<div class="copiável">
+					<code>imoApp.clientes.coleção.set({}, new Thing())</code>
+					<code>imoApp.clientes.coleção.set(new Thing("thang"), new Thing("thong"))</code>
+					<code>imoApp.clientes.coleção.nome = "Thing Thong"</code>
+				</div>
+				<p>Atenção ao facto do uso de
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/get" target="_blank">Maps</a> ser diferente do uso de Arrays.
+				</p>
+			</section>
+			<section id="GUI">
+				<h5>Nesta versão não existe interação entre a imoApp e a página web (conhecida como a imoGUI da imoApp).</h5>
+				<p>Esta página é apenas informativa e (ainda) não representa a visualização gráfica do que acontece na imoApp.</p>
+			</section>
+		</article>
+
+		<article id="tópicos">
+			<header>
+				<h3>Novos conceitos, palavras chave, síntaxe e/ou APIs de JavaScript abordados/introduzidos <span class="quadro">neste exemplo</span></h3>
+			</header>
+			<section id="conceitos">
+				<p>Conceitos</p>
+				<ul>
+					<li>Acesso a coleções (não do tipo Array)</li>
+					<li>Chaves ("keys")  não numéricos de indexação em coleções</li>
+					<li>Coleções em JavaScript não são tipificadas, isto é, aceitam qualquer tipo de item</li>
+					<li>Como qualquerobjeto em JavaScript, "Maps" são objetos dinámicos, isto é, pode-se acrescentar membros após a sua instanciação</li>
+				</ul>
+			</section>
+			<section id="palavras">
+				<p>Palavras chave</p>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+			<section id="síntaxe">
+				<p>Síntaxe</p>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+			<section id="APIs">
+				<p>APIs ("Application Programming Interface")</p>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map" target="_blank">Map</a></li>
+					<li>Map.get()</li>
+					<li>Map.set()</li>
+				</ul>
+			</section>
+		</article>
+
+	</body>
+</html>

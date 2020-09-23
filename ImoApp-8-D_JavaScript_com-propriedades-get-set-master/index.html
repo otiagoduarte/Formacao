@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			ImoApp-8-D_JavaScript_com-propriedades-get-set
+		</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="estilo.css"/>
+		<script src="ImoApp.js"></script>
+		<script src="Clientes.js"></script>
+		<script src="Imóveis.js"></script>
+		<script src="Cliente.js"></script>
+		<script src="Imóvel.js"></script>
+		<script src="Endereço.js"></script>
+		<script src="CódigoPostal.js"></script>
+		<script src="Freguesias.js"></script>
+		<script src="Envios.js"></script>
+		<script src="preparar.js"></script>
+	</head>
+	<body onload="preparar();window.imoApp = new ImoApp()">
+		<h2>ImoApp-8-D_JavaScript_com-propriedades-get-set</h2>
+		<article id="intro">
+			<header>
+				<h3>Intro · Uma App Imobiliária</h3>
+				<h4>Uma aplicação imobiliária "ImoApp"</h4>
+			</header>
+			<p>Esta app gere coleções de imóveis e de clientes.</p>
+			<section>
+				<p>Nesta versão, foi acrescentada funcionalidade (<span class="quadro">funções</span> ou "métodos") à aplicação: é agora possível <span class="quadro">procurar</span> nas coleções de objetos.</p>
+				<ul>
+					<li>A procura de clientes é feito com o email do cliente.</li>
+					<li>A procura de imóveis é feita com a cidade do imóvel.</li>
+				</ul>
+				<p>	Neste versão a procura devolve apenas o 1° imóvel encontrado na cidade especificada.</p>
+				<p>A ImoApp também já <span class="quadro">aceita novos clientes</span> através da invocação do método registarCliente(). Para a API deste método, ver o código fonte.</p>
+			</section>
+			<section>
+				<p>Esta versão ainda demonstra:</p>
+				<ul>
+					<li> membros estáticos (sem a palavra chave <span class="keyword">static</span>, que é apenas utilizável na síntaxe com a palavra chave <span class="keyword">class</span>)</li>
+					<li>uso de propriedades, com getters e/ou setters</li>
+				</ul>
+				<p>
+					O objetivo é otimizar os endereços dos imóveis, reduzindo o repetição de valores iguais, incorporando-os em objetos ±fixos: freguesias com os seus códigos postais.
+					Em vez de cada imóvel ter os seus próprios valores do código postal, há agora uma <span class="keyword">class</span> Freguesias que resolve códigos postais em instancias predefinidas de freguesias.
+				</p>
+				<p>Em outras linguagens de programação, isto seria feito em 'enumerações', mas JavaScript não tem uma palavra chave para isso (p.ex. "<span class="keyword">enum</span>" em Java)./p>
+				<p>Em consequência, há um <span class="quadro">uso mais eficaz da memória</span> do navegador.</p>
+			</section>
+		</article>
+		<article id="uso">
+			<header>
+				<h3>Instruções de uso</h3>
+				<p>Poderá testar a app semelhante ao uso da versão anterior  (com as ferramentas do programador do navegador).</p>
+			</header>
+			<section id="consola">
+				<div class="copiável">
+					<code>imoApp.clientes.procurar("joao.bosco@meo.pt")</code>
+					<code>imoApp.registarCliente("Praça do Patê", 63, "Faro", 8100, 366, "Pedro Puno", "pedropuno@gmail.com", 998745621)</code>
+				</div>
+				<p>Pode ainda registar novas freguesias, cujos códigos postais poderão ser utilizados aquando da adição de novos imóveis ou clientes.</p>
+				<div class="copiável">
+					<code>Freguesias.push({nome: "Calvário", códigoPostal: {principal: 1490, secundário: 058}})</code>
+					<code>imoApp.registarCliente("Praça dos Calvários", 58, "Lisboa",1490, 058, "Amália Sós", "amaliasos@telepac.pt", 213654789)</code>
+					<code>imoApp.clientes.coleção.get("amaliasos@telepac.pt")</code>
+				</div>
+			</section>
+			<section id="GUI">
+				<h5>Nesta versão não existe interação entre a imoApp e a página web (conhecida como a imoGUI da imoApp).</h5>
+				<p>Esta página é apenas informativa e (ainda) não representa a visualização gráfica do que acontece na imoApp.</p>
+			</section>
+
+		</article>
+
+		<article id="tópicos">
+			<header>
+				<h3>Novos conceitos, palavras chave, síntaxe e/ou APIs de JavaScript abordados/introduzidos <span class="quadro">neste exemplo</span></h3>
+			</header>
+			<section id="conceitos">
+				<p>Conceitos</p>
+				<ul>
+					<li>Definição de métodos</li>
+					<li>Devolver um resultado</li>
+					<li>Declaração de membros de <span class="keyword">class</span> (não de instâncias)</li>
+					<li>Enumeração</li>
+					<li>Iterações ("loops")</li>
+					<li>Comparação</li>
+					<li>"Boolean"</li>
+					<li>Herança com protótipos</li>
+					<li>Definição de funções no protótipo</li>
+					<li>Métodos na síntaxe <span class="keyword">class</span> vs síntaxe <span class="keyword">function</span></li>
+				</ul>
+			</section>
+			<section id="palavras">
+				<p>Palavras chave</p>
+				<ul>
+					<li>true</li>
+					<li>false</li>
+					<li>return</li>
+					<li>static (método)</li>
+					<li>while</li>
+					<li>if</li>
+					<li>break</li>
+					<li>get (propriedade)</li>
+					<li>prototype</li>
+					<li>function (definição de métodos)</li>
+				</ul>
+				<p>Nota: static, apenas conceitual. Seria utilizável na síntaxe com a palavra chave <span class="keyword">class</span>.</p>
+				<p>Nota: <span class="keyword">true</span> e <span class="keyword">false</span> não utilizados nos exemplos.</p>
+			</section>
+			<section id="síntaxe">
+				<p>Síntaxe</p>
+				<ul>
+					<li>[] (definição literal de um "array")</li>
+					<li>[{},{}] (atribuição de itens na definição literal de um "array")</li>
+					<li>=> ("lambda" ou "arrow function", ver também versões posteriores)</li>
+					<li>-- (operador atalho que substui "-1")</li>
+					<li>=== (operador de teste de igualdade)</li>
+					<li>!== (operador de teste de desigualdade)</li>
+				</ul>
+			</section>
+			<section id="APIs">
+				<p>APIs ("Application Programming Interface")</p>
+				<ul>
+					<li>Array.length</li>
+					<li>Array.push()</li>
+					<li>Array.find()</li>
+				</ul>
+			</section>
+		</article>
+
+	</body>
+</html>

@@ -1,0 +1,135 @@
+:root {
+	--amarelo_leve-x: rgb(254, 243, 188);
+	--amarelo_leve: rgb(254, 234, 147);
+	--amarelo: rgb(254, 204, 5);
+	--amarelo_escuro: rgb(224, 174, 4);
+	--amarelo_escuro-xx: rgb(139, 107, 0);
+	--azul_leve-xx: rgb(186, 226, 246);
+	--azul: rgb(0, 106, 167);
+	--azul_escuro-xxx: rgb(0, 27, 55);
+	--verde_leve-x: rgb(183, 243, 203);
+	--verde_leve: rgb(140, 244, 174);
+	--verde: rgb(90, 225, 125);
+	--vermelho_leve-x: rgb(226, 160, 146);
+	--vermelho: rgb(198, 62, 20);
+}
+
+body {
+	font-family:"HP Simplified Light",Roboto,RobotoDraft,"HP Simplified","DejaVu Sans Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 18px;
+	color: var(--azul_escuro-xxx);
+	background-color: var(--amarelo);
+	min-width: 400px;
+	max-width: 700px;
+	margin: auto;
+}
+
+h2 {
+	text-align: center;
+}
+
+article {
+	background-color: var(--amarelo_leve);
+}
+
+article, section {
+	border: 2px dotted var(--vermelho);
+	border-radius: 15px;
+	padding: 10px;
+	margin: 5px;
+}
+
+section {
+	background-color: var(--amarelo_leve-x);
+}
+
+article p {
+	margin-left: 20px;
+}
+
+table {
+	margin: 0 10%;
+	border-collapse: collapse;
+	width: 80%;
+	background-color: var(--verde_leve);
+}
+
+td, th {
+	border: 1px dotted var(--verde);
+	padding: 5px;
+}
+
+button {
+	background-color: var(--verde_leve-x);
+	border-radius: 25px;
+	padding: 8px;
+	margin: 14px 0 14px 10px;
+	display: block;
+	box-shadow: 2px 2px 7px var(--azul_escuro-xxx);
+}
+
+li {
+	margin: 5px;
+	padding-right: 25px;
+}
+
+a, a:visited {
+	color: var(--azul);
+}
+
+section#palavras li, span {
+	color: var(--vermelho);
+	font-variant: small-caps;
+	font-weight: bold;
+}
+
+span.info {
+	font-size: smaller;
+	color: var(--amarelo);
+}
+
+span.quadro {
+	border: 1px solid var(--vermelho);
+	padding: 0 2px;
+}
+
+section#palavras li, span.keyword {
+	font-variant: normal;
+	font-size: 1.2rem;
+}
+
+div.imagens {
+	display: flex;
+	justify-content: center;
+}
+
+figure {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	font-size: .75rem;
+}
+
+figure img {
+	max-width: 250px;
+}
+
+code {
+	display: block;
+	background-color: var(--azul_leve-xx);
+	color: var(--amarelo_escuro-xx);
+	font-size: small;
+	margin: 0;
+	padding: 5px 0;
+	margin-left: 30px;
+}
+
+code::before {
+	content: "> ";
+}
+
+code.copiado {
+	transition-property: color;
+	transition-duration: 500ms;
+	color: red;
+}

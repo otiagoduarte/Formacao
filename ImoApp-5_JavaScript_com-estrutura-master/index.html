@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ImoApp-5_JavaScript_com-estrutura</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="estilo.css"/>
+		<script src="ImoApp.js"></script>
+		<script src="Clientes.js"></script>
+		<script src="Imóveis.js"></script>
+		<script src="Cliente.js"></script>
+		<script src="Imóvel.js"></script>
+		<script src="Endereço.js"></script>
+		<script src="CódigoPostal.js"></script>
+		<script src="preparar.js"></script>
+	</head>
+	<body onload="preparar();window.imoApp = new ImoApp()">
+		<h2>ImoApp-5_JavaScript_com-estrutura</h2>
+		<article id="intro">
+			<header>
+				<h3>Intro · Uma App Imobiliária</h3>
+				<h4>Versão local de uma App Imobiliária 'ImoApp"</h4>
+			</header>
+			<p>Esta app gere uma coleção de imóveis e uma coleção de clientes</p>
+			<p>
+				Nesta versão é demonstrado uma <span class="quadro">melhor estruturação da classes</span>, promovendo a reutilização delas.
+				P.ex. em vez de um endereço consistir de campos primitivos na <span class="keyword">class</span> Imóvel, são introduzidas as <span class="keyword">class</span> Endereço e CódigoPostal.
+			</p>
+			<p>As <span class="keyword">class</span> Endereço e CódigoPostal são utilizadas por ambas as <span class="keyword">class</span> Imóvel e Cliente, promovendo a reutilização.</p>
+		</article>
+		<article id="uso">
+			<header>
+				<h3>Instruções de uso</h3>
+				<p>Poderá testar a app semelhante ao uso da versão anterior  (com as ferramentas do programador do navegador).</p>
+			</header>
+			<section id="consola">
+				<h5>Na consola de navegadores</h5>
+				<p>Para ver que objetos a imoApp já está a gerir, p.ex.:</p>
+				<div class="copiável">
+					<code>imoApp.imóveis</code>
+					<code>imoApp.imóveis.imóvel0</code>
+					<code>imoApp.imóveis.imóvel0.endereço</code>
+					<code>imoApp.imóveis.imóvel0.endereço.códigoPostal</code>
+					<code>imoApp.imóveis.imóvel0.endereço.códigoPostal.principal</code>
+					<code>imoApp.clientes.cliente0</code>
+				</div>
+				<p>Para acrescentar imóveis, p.ex.:</p>
+				<div class="copiável">
+					<code>imoApp.imóveis.imóvel2 = new Imóvel("Praça da Tristeza", 133, "Porto", 2300, 375, 75000);</code>
+				</div>
+				<p>De particular interesse nesta versão é comparar o "Object Tree" desta com aquele da versão anterior.</p>
+				<div class="imagens">
+					<figure>
+						<img src="sem-object-tree.png" alt="Sem Object Tree"/>
+						<figcaption>"Flat Object Tree"</figcaption>
+					</figure>
+					<figure>
+						<img src="object-tree.png" alt="The Object Tree"/>
+						<figcaption>"Object Tree" após reestruturação</figcaption>
+					</figure>
+				</div>
+			</section>
+			<section id="GUI">
+				<h5>Nesta versão não existe interação entre a imoApp e a página web (conhecida como a imoGUI da imoApp).</h5>
+				<p>Esta página é apenas informativa e (ainda) não representa a visualização gráfica do que acontece na imoApp.</p>
+			</section>
+		</article>
+
+		<article id="tópicos">
+			<header>
+				<h3>Novos conceitos, palavras chave, síntaxe e/ou APIs de JavaScript abordados/introduzidos <span class="quadro">neste exemplo</span></h3>
+			</header>
+			<section id="conceitos">
+				<p>Conceitos</p>
+				<ul>
+					<li>Estruturação numa "Object Tree"</li>
+					<li>Reutilização de classes</li>
+				</ul>
+			</section>
+			<section id="palavras">
+				<p>Palavras chave</p>
+				<ul>
+					<li>new ... new ... (instanciação de objetos embutidos)</li>
+				</ul>
+			</section>
+			<section id="síntaxe">
+				<p>Síntaxe</p>
+				<ul>
+					<li>. (o símbolo "dot" para navegação na "Object Tree")</li>
+				</ul>
+			</section>
+			<section id="APIs">
+				<p>APIs ("Application Programming Interface")</p>
+				<ul>
+					<li></li>
+				</ul>
+			</section>
+		</article>
+
+	</body>
+</html>

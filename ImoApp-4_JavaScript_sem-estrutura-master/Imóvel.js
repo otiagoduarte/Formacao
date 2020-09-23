@@ -9,5 +9,6 @@ function Imóvel(rua, número, cidade, códigoPostalPrincipal, códigoPostalsecu
 
 	//teste
 	this.cor = cor;
+	//
 
 }
